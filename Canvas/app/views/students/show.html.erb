@@ -1,0 +1,17 @@
+<h1><%= @student.name %></h1>
+
+
+<h3> Major:</h3><%= @student.major %>
+
+<h3> Credits: </h3> 
+
+<h3>Courses:</h3>
+<h4>
+<ul>
+<% @student.courses.each do |course| %>
+  <li><%= link_to course.name, course_path(course) %></li>
+  <% end %>
+</ul>
+</h4>
+
+<h3> Professors: </h3>

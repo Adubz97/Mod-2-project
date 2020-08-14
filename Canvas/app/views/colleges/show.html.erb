@@ -1,0 +1,10 @@
+<h1> <%= @college.name %> </h1><br>
+
+College rating: <%= @college.rating %>
+
+
+<h3>Courses:</h3>
+<ul> <% @college.courses.each do |course| %>
+ <li> <%= link_to course.name, course_path(course) %></li>
+<% end %>
+</ul>
