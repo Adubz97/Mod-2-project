@@ -58,3 +58,633 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 1101)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateStudents (20200814151503)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "students" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "major" varchar, "student_number" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151503"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateProfessors (20200814151647)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "professors" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "subject" varchar, "review" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151647"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateCourses (20200814151737)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" varchar, "setting" varchar, "semester" varchar, "credit" integer, "college_id" integer, "professor_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151737"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateColleges (20200814151802)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "colleges" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "rating" integer, "university_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151802"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateRegistrations (20200814151845)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "registrations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "registration_number" integer, "student_id" integer, "course_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151845"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUniversities (20200814151900)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "universities" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "address" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200814151900"]]
+  [1m[35m (39.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-14 15:27:17.945195"], ["updated_at", "2020-08-14 15:27:17.945195"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUniversity Create (0.3ms)[0m  [1m[32mINSERT INTO "universities" ("name", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "University of Maryland"], ["address", "1113 Mitchel building, College Park, MD 20742"], ["created_at", "2020-08-14 16:48:29.783218"], ["updated_at", "2020-08-14 16:48:29.783218"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Leonardo Bogan"], ["major", "Bachelor of Nursing"], ["student_number", 1485270], ["created_at", "2020-08-14 16:48:30.793749"], ["updated_at", "2020-08-14 16:48:30.793749"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.4ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Prince Kihn VM"], ["major", "Bachelor of Creative Arts"], ["student_number", 2635007], ["created_at", "2020-08-14 16:48:30.798079"], ["updated_at", "2020-08-14 16:48:30.798079"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ed Hayes"], ["major", "Bachelor of Psychology"], ["student_number", 7302941], ["created_at", "2020-08-14 16:48:30.802231"], ["updated_at", "2020-08-14 16:48:30.802231"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miss Jeannie Rath"], ["major", "Master of Law"], ["student_number", 6035278], ["created_at", "2020-08-14 16:48:30.805668"], ["updated_at", "2020-08-14 16:48:30.805668"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Graham Bergstrom"], ["major", "Master of Commerce"], ["student_number", 1589497], ["created_at", "2020-08-14 16:48:30.809131"], ["updated_at", "2020-08-14 16:48:30.809131"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Estela Moen"], ["major", "Associate Degree in Biological Science"], ["student_number", 3447303], ["created_at", "2020-08-14 16:48:30.812314"], ["updated_at", "2020-08-14 16:48:30.812314"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "The Hon. Victoria Leannon"], ["major", "Bachelor of Commerce"], ["student_number", 2173843], ["created_at", "2020-08-14 16:48:30.815525"], ["updated_at", "2020-08-14 16:48:30.815525"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kecia Nienow"], ["major", "Master of Communications"], ["student_number", 7932587], ["created_at", "2020-08-14 16:48:30.819048"], ["updated_at", "2020-08-14 16:48:30.819048"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Carrie Welch"], ["major", "Master of Biomedical Science"], ["student_number", 4227327], ["created_at", "2020-08-14 16:48:30.822325"], ["updated_at", "2020-08-14 16:48:30.822325"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Leighann Ratke"], ["major", "Bachelor of Education"], ["student_number", 3780044], ["created_at", "2020-08-14 16:48:30.825272"], ["updated_at", "2020-08-14 16:48:30.825272"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Damon Hilpert II"], ["subject", "Education"], ["review", "Irony crucifix taxidermy lomo muggle magic."], ["created_at", "2020-08-14 16:48:30.832886"], ["updated_at", "2020-08-14 16:48:30.832886"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Contessa Hermiston"], ["subject", "Education"], ["review", "Bespoke street beard tilde actually."], ["created_at", "2020-08-14 16:48:30.838374"], ["updated_at", "2020-08-14 16:48:30.838374"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.5ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Nichol Schaefer"], ["subject", "Commerce"], ["review", "Polaroid crucifix 8-bit blue bottle direct trade 90's letterpress flannel."], ["created_at", "2020-08-14 16:48:30.844307"], ["updated_at", "2020-08-14 16:48:30.844307"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dane Champlin"], ["subject", "Creative Arts"], ["review", "Meh williamsburg mixtape cardigan mumblecore park distillery."], ["created_at", "2020-08-14 16:48:30.849868"], ["updated_at", "2020-08-14 16:48:30.849868"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Delphine Vandervort"], ["subject", "Biological Science"], ["review", "Wayfarers meggings pbr&b sriracha."], ["created_at", "2020-08-14 16:48:30.854579"], ["updated_at", "2020-08-14 16:48:30.854579"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rufus Wisoky"], ["subject", "Business"], ["review", "Polaroid master vice chambray ramps cray franzen flannel vinegar."], ["created_at", "2020-08-14 16:48:30.859185"], ["updated_at", "2020-08-14 16:48:30.859185"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.4ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Rita Ward"], ["subject", "Design"], ["review", "Flannel fashion axe portland seitan whatever hammock intelligentsia scenester tote bag."], ["created_at", "2020-08-14 16:48:30.863164"], ["updated_at", "2020-08-14 16:48:30.863164"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dr. Hiram Steuber"], ["subject", "Law"], ["review", "Ethical retro deep v kombucha tousled messenger bag."], ["created_at", "2020-08-14 16:48:30.869343"], ["updated_at", "2020-08-14 16:48:30.869343"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Scot Stracke"], ["subject", "Biological Science"], ["review", "Leggings diy neutra seitan franzen fingerstache distillery crucifix chartreuse."], ["created_at", "2020-08-14 16:48:30.873408"], ["updated_at", "2020-08-14 16:48:30.873408"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Kimi Fadel"], ["subject", "Psychology"], ["review", "Green juice diy art party photo booth twee kombucha."], ["created_at", "2020-08-14 16:48:30.877925"], ["updated_at", "2020-08-14 16:48:30.877925"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.5ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ironbarrow High School"], ["rating", 10], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.918102"], ["updated_at", "2020-08-14 16:48:30.918102"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lakeacre High School"], ["rating", 2], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.924541"], ["updated_at", "2020-08-14 16:48:30.924541"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Icelyn Secondary College"], ["rating", 1], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.929808"], ["updated_at", "2020-08-14 16:48:30.929808"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.7ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brighthurst High School"], ["rating", 2], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.935113"], ["updated_at", "2020-08-14 16:48:30.935113"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Falconholt High School"], ["rating", 3], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.941795"], ["updated_at", "2020-08-14 16:48:30.941795"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.6ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Icelyn Secondary College"], ["rating", 6], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.946619"], ["updated_at", "2020-08-14 16:48:30.946619"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mallowpond Secondary College"], ["rating", 6], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.953478"], ["updated_at", "2020-08-14 16:48:30.953478"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.5ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ironbarrow High School"], ["rating", 10], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.958078"], ["updated_at", "2020-08-14 16:48:30.958078"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Falconholt High School"], ["rating", 4], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.963046"], ["updated_at", "2020-08-14 16:48:30.963046"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.2ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.4ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Falconholt High"], ["rating", 4], ["university_id", 1], ["created_at", "2020-08-14 16:48:30.969287"], ["updated_at", "2020-08-14 16:48:30.969287"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Computer Science 487"], ["description", "Squid lumbersexual small batch normcore skateboard tofu."], ["setting", "On campus"], ["semester", "Spring"], ["credit", 4], ["college_id", 3], ["professor_id", 5], ["created_at", "2020-08-14 16:48:30.986214"], ["updated_at", "2020-08-14 16:48:30.986214"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Applied Science (Psychology) 498"], ["description", "Literally banh mi asymmetrical normcore."], ["setting", "Remotely"], ["semester", "Spring"], ["credit", 1], ["college_id", 5], ["professor_id", 1], ["created_at", "2020-08-14 16:48:30.993156"], ["updated_at", "2020-08-14 16:48:30.993156"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Biological Science 553"], ["description", "Lumbersexual muggle magic raw denim photo booth keffiyeh dreamcatcher semiotics direct trade celiac."], ["setting", "Online"], ["semester", "Winter"], ["credit", 2], ["college_id", 7], ["professor_id", 9], ["created_at", "2020-08-14 16:48:31.000287"], ["updated_at", "2020-08-14 16:48:31.000287"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Commerce 587"], ["description", "Ramps semiotics trust fund authentic health irony retro butcher meditation."], ["setting", "Online"], ["semester", "Summer"], ["credit", 2], ["college_id", 6], ["professor_id", 9], ["created_at", "2020-08-14 16:48:31.006371"], ["updated_at", "2020-08-14 16:48:31.006371"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Education 562"], ["description", "Pork belly tousled five dollar toast crucifix photo booth 90's."], ["setting", "Remotely"], ["semester", "Spring"], ["credit", 1], ["college_id", 3], ["professor_id", 6], ["created_at", "2020-08-14 16:48:31.011999"], ["updated_at", "2020-08-14 16:48:31.011999"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Teaching 120"], ["description", "Tilde vice williamsburg hashtag loko authentic kitsch thundercats umami."], ["setting", "On campus"], ["semester", "Winter"], ["credit", 2], ["college_id", 9], ["professor_id", 7], ["created_at", "2020-08-14 16:48:31.019446"], ["updated_at", "2020-08-14 16:48:31.019446"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Information Systems 324"], ["description", "Brooklyn hammock tofu tumblr tattooed mumblecore wes anderson kitsch."], ["setting", "Remotely"], ["semester", "Spring"], ["credit", 2], ["college_id", 2], ["professor_id", 7], ["created_at", "2020-08-14 16:48:31.027304"], ["updated_at", "2020-08-14 16:48:31.027304"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Engineering 571"], ["description", "Keffiyeh aesthetic tattooed fanny pack tofu art party listicle vinyl 90's."], ["setting", "Online"], ["semester", "Summer"], ["credit", 4], ["college_id", 8], ["professor_id", 8], ["created_at", "2020-08-14 16:48:31.038246"], ["updated_at", "2020-08-14 16:48:31.038246"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Nursing 523"], ["description", "Bespoke farm-to-table roof wes anderson viral kinfolk five dollar toast 3 wolf moon keffiyeh."], ["setting", "On campus"], ["semester", "Summer"], ["credit", 1], ["college_id", 8], ["professor_id", 1], ["created_at", "2020-08-14 16:48:31.047328"], ["updated_at", "2020-08-14 16:48:31.047328"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Arts 519"], ["description", "Mustache tacos raw denim poutine dreamcatcher flexitarian venmo artisan."], ["setting", "Online"], ["semester", "Fall"], ["credit", 3], ["college_id", 9], ["professor_id", 3], ["created_at", "2020-08-14 16:48:31.057627"], ["updated_at", "2020-08-14 16:48:31.057627"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.4ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 7244229852], ["student_id", 5], ["course_id", 7], ["created_at", "2020-08-14 16:48:31.077947"], ["updated_at", "2020-08-14 16:48:31.077947"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 7966193803], ["student_id", 3], ["course_id", 7], ["created_at", "2020-08-14 16:48:31.086594"], ["updated_at", "2020-08-14 16:48:31.086594"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.6ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 3437378752], ["student_id", 3], ["course_id", 6], ["created_at", "2020-08-14 16:48:31.094142"], ["updated_at", "2020-08-14 16:48:31.094142"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.5ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 9634962149], ["student_id", 2], ["course_id", 2], ["created_at", "2020-08-14 16:48:31.105986"], ["updated_at", "2020-08-14 16:48:31.105986"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.4ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 8978778216], ["student_id", 4], ["course_id", 8], ["created_at", "2020-08-14 16:48:31.114837"], ["updated_at", "2020-08-14 16:48:31.114837"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 7710386667], ["student_id", 2], ["course_id", 4], ["created_at", "2020-08-14 16:48:31.121761"], ["updated_at", "2020-08-14 16:48:31.121761"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 6623256257], ["student_id", 7], ["course_id", 3], ["created_at", "2020-08-14 16:48:31.128751"], ["updated_at", "2020-08-14 16:48:31.128751"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 6022881427], ["student_id", 2], ["course_id", 9], ["created_at", "2020-08-14 16:48:31.136072"], ["updated_at", "2020-08-14 16:48:31.136072"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.4ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 3595776142], ["student_id", 2], ["course_id", 6], ["created_at", "2020-08-14 16:48:31.142364"], ["updated_at", "2020-08-14 16:48:31.142364"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 3874730478], ["student_id", 7], ["course_id", 10], ["created_at", "2020-08-14 16:48:31.148341"], ["updated_at", "2020-08-14 16:48:31.148341"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUniversity Destroy (0.4ms)[0m  [1m[31mDELETE FROM "universities" WHERE "universities"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Destroy (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Destroy (0.2ms)[0m  [1m[31mDELETE FROM "professors" WHERE "professors"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.3ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Destroy (0.2ms)[0m  [1m[31mDELETE FROM "colleges" WHERE "colleges"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.3ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Destroy (0.2ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mRegistration Load (0.1ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "registrations" WHERE "registrations"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUniversity Create (0.3ms)[0m  [1m[32mINSERT INTO "universities" ("name", "address", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "University of Maryland"], ["address", "1113 Mitchel building, College Park, MD 20742"], ["created_at", "2020-08-14 16:54:16.181151"], ["updated_at", "2020-08-14 16:54:16.181151"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Buster Lubowitz"], ["major", "Master of Commerce"], ["student_number", 1348938], ["created_at", "2020-08-14 16:54:16.339181"], ["updated_at", "2020-08-14 16:54:16.339181"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Adriana Wuckert"], ["major", "Bachelor of Applied Science (Psychology)"], ["student_number", 9125586], ["created_at", "2020-08-14 16:54:16.342412"], ["updated_at", "2020-08-14 16:54:16.342412"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Hollis VonRueden"], ["major", "Master of Architectural Technology"], ["student_number", 5947502], ["created_at", "2020-08-14 16:54:16.345533"], ["updated_at", "2020-08-14 16:54:16.345533"]]
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.6ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Reid Ankunding"], ["major", "Master of Creative Arts"], ["student_number", 5807889], ["created_at", "2020-08-14 16:54:16.348602"], ["updated_at", "2020-08-14 16:54:16.348602"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Arturo Wuckert"], ["major", "Associate Degree in Law"], ["student_number", 7194174], ["created_at", "2020-08-14 16:54:16.352739"], ["updated_at", "2020-08-14 16:54:16.352739"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.3ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bobbie Legros"], ["major", "Master of Commerce"], ["student_number", 2866533], ["created_at", "2020-08-14 16:54:16.356324"], ["updated_at", "2020-08-14 16:54:16.356324"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Jon Murazik"], ["major", "Master of Arts"], ["student_number", 5898397], ["created_at", "2020-08-14 16:54:16.359899"], ["updated_at", "2020-08-14 16:54:16.359899"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dorthey Thompson"], ["major", "Bachelor of Creative Arts"], ["student_number", 6184371], ["created_at", "2020-08-14 16:54:16.363572"], ["updated_at", "2020-08-14 16:54:16.363572"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Katelin Watsica"], ["major", "Associate Degree in Education"], ["student_number", 9947779], ["created_at", "2020-08-14 16:54:16.366709"], ["updated_at", "2020-08-14 16:54:16.366709"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mStudent Create (0.2ms)[0m  [1m[32mINSERT INTO "students" ("name", "major", "student_number", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lucille Padberg"], ["major", "Bachelor of Applied Science (Psychology)"], ["student_number", 3470948], ["created_at", "2020-08-14 16:54:16.369984"], ["updated_at", "2020-08-14 16:54:16.369984"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lazaro Hammes"], ["subject", "Teaching"], ["review", "Kickstarter vice tofu lomo pitchfork muggle magic vhs pickled fixie wes anderson."], ["created_at", "2020-08-14 16:54:16.373285"], ["updated_at", "2020-08-14 16:54:16.373285"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ray O'Kon"], ["subject", "Teaching"], ["review", "Ramps kitsch goth xoxo portland squid bespoke scenester."], ["created_at", "2020-08-14 16:54:16.376603"], ["updated_at", "2020-08-14 16:54:16.376603"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miss Adam Koepp"], ["subject", "Computer Science"], ["review", "Gluten-free you probably haven't heard of them freegan before they sold out pickled hella tacos deep v chicharrones vice."], ["created_at", "2020-08-14 16:54:16.389808"], ["updated_at", "2020-08-14 16:54:16.389808"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Elaine Mohr"], ["subject", "Commerce"], ["review", "Keytar cold-pressed squid echo chambray deep v aesthetic pabst yr."], ["created_at", "2020-08-14 16:54:16.393315"], ["updated_at", "2020-08-14 16:54:16.393315"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Janina O'Hara"], ["subject", "Psychology"], ["review", "Tilde paleo meditation 3 wolf moon trust fund yr actually pickled jean shorts lumbersexual beard."], ["created_at", "2020-08-14 16:54:16.396445"], ["updated_at", "2020-08-14 16:54:16.396445"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Eva Shanahan"], ["subject", "Teaching"], ["review", "Etsy fashion axe mumblecore viral tote bag bitters."], ["created_at", "2020-08-14 16:54:16.399447"], ["updated_at", "2020-08-14 16:54:16.399447"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Chung Boyle"], ["subject", "Design"], ["review", "Letterpress everyday blue bottle health carry butcher etsy master before they sold out."], ["created_at", "2020-08-14 16:54:16.402568"], ["updated_at", "2020-08-14 16:54:16.402568"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Coleman Jakubowski"], ["subject", "Psychology"], ["review", "Sartorial green juice twee blog pinterest tumblr +1 pop-up hammock cred."], ["created_at", "2020-08-14 16:54:16.405725"], ["updated_at", "2020-08-14 16:54:16.405725"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.2ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Anton Stoltenberg DVM"], ["subject", "Psychology"], ["review", "Loko gentrify photo booth mlkshk celiac hella knausgaard taxidermy chillwave shabby chic."], ["created_at", "2020-08-14 16:54:16.408817"], ["updated_at", "2020-08-14 16:54:16.408817"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mProfessor Create (0.3ms)[0m  [1m[32mINSERT INTO "professors" ("name", "subject", "review", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Miss Scott Ledner"], ["subject", "Biomedical Science"], ["review", "Vegan meh helvetica tacos swag irony synth cronut muggle magic mustache."], ["created_at", "2020-08-14 16:54:16.412579"], ["updated_at", "2020-08-14 16:54:16.412579"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.3ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ostbarrow High School"], ["rating", 6], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.419106"], ["updated_at", "2020-08-14 16:54:16.419106"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Clearcourt Secondary College"], ["rating", 9], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.423305"], ["updated_at", "2020-08-14 16:54:16.423305"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Falconholt High"], ["rating", 8], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.426913"], ["updated_at", "2020-08-14 16:54:16.426913"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lakeacre High"], ["rating", 8], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.430698"], ["updated_at", "2020-08-14 16:54:16.430698"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Flowerlake High"], ["rating", 7], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.434656"], ["updated_at", "2020-08-14 16:54:16.434656"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Brookville High"], ["rating", 3], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.438725"], ["updated_at", "2020-08-14 16:54:16.438725"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Lakeacre High School"], ["rating", 6], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.442529"], ["updated_at", "2020-08-14 16:54:16.442529"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.6ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mallowpond High"], ["rating", 6], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.446511"], ["updated_at", "2020-08-14 16:54:16.446511"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Ironston High"], ["rating", 10], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.451516"], ["updated_at", "2020-08-14 16:54:16.451516"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUniversity Load (0.1ms)[0m  [1m[34mSELECT "universities".* FROM "universities"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCollege Create (0.2ms)[0m  [1m[32mINSERT INTO "colleges" ("name", "rating", "university_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Mallowtown High"], ["rating", 2], ["university_id", 2], ["created_at", "2020-08-14 16:54:16.455777"], ["updated_at", "2020-08-14 16:54:16.455777"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Design 393"], ["description", "Distillery vice messenger bag whatever photo booth pabst you probably haven't heard of them art party."], ["setting", "On campus"], ["semester", "Fall"], ["credit", 1], ["college_id", 12], ["professor_id", 15], ["created_at", "2020-08-14 16:54:16.461328"], ["updated_at", "2020-08-14 16:54:16.461328"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Applied Science (Psychology) 377"], ["description", "Skateboard pabst selvage synth banjo heirloom kitsch salvia swag irony."], ["setting", "Remotely"], ["semester", "Winter"], ["credit", 1], ["college_id", 15], ["professor_id", 20], ["created_at", "2020-08-14 16:54:16.466241"], ["updated_at", "2020-08-14 16:54:16.466241"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Communications 495"], ["description", "Selvage chicharrones bespoke umami lomo farm-to-table pop-up stumptown schlitz tote bag mumblecore."], ["setting", "Remotely"], ["semester", "Winter"], ["credit", 4], ["college_id", 13], ["professor_id", 14], ["created_at", "2020-08-14 16:54:16.471598"], ["updated_at", "2020-08-14 16:54:16.471598"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Law 136"], ["description", "Mlkshk paleo wayfarers migas health locavore yolo celiac."], ["setting", "On campus"], ["semester", "Spring"], ["credit", 4], ["college_id", 13], ["professor_id", 12], ["created_at", "2020-08-14 16:54:16.476415"], ["updated_at", "2020-08-14 16:54:16.476415"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Health Science 161"], ["description", "Austin yr crucifix tofu cronut listicle chillwave tote bag actually."], ["setting", "Online"], ["semester", "Fall"], ["credit", 3], ["college_id", 16], ["professor_id", 20], ["created_at", "2020-08-14 16:54:16.481354"], ["updated_at", "2020-08-14 16:54:16.481354"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Forensic Science 340"], ["description", "Carry portland you probably haven't heard of them cornhole mustache pbr&b everyday pop-up."], ["setting", "On campus"], ["semester", "Fall"], ["credit", 1], ["college_id", 11], ["professor_id", 16], ["created_at", "2020-08-14 16:54:16.487614"], ["updated_at", "2020-08-14 16:54:16.487614"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Communications 372"], ["description", "Kitsch dreamcatcher cronut flannel freegan pop-up messenger bag chambray."], ["setting", "Remotely"], ["semester", "Spring"], ["credit", 1], ["college_id", 11], ["professor_id", 11], ["created_at", "2020-08-14 16:54:16.493462"], ["updated_at", "2020-08-14 16:54:16.493462"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Law 522"], ["description", "Paleo lo-fi photo booth plaid goth mixtape next level art party gentrify."], ["setting", "On campus"], ["semester", "Spring"], ["credit", 2], ["college_id", 12], ["professor_id", 18], ["created_at", "2020-08-14 16:54:16.498732"], ["updated_at", "2020-08-14 16:54:16.498732"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Applied Science (Psychology) 396"], ["description", "Deep v art party keytar offal tofu trust fund banh mi chicharrones pabst goth."], ["setting", "On campus"], ["semester", "Winter"], ["credit", 3], ["college_id", 13], ["professor_id", 11], ["created_at", "2020-08-14 16:54:16.503711"], ["updated_at", "2020-08-14 16:54:16.503711"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCourse Create (0.2ms)[0m  [1m[32mINSERT INTO "courses" ("name", "description", "setting", "semester", "credit", "college_id", "professor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Forensic Science 596"], ["description", "+1 shabby chic forage single-origin coffee sustainable gastropub health."], ["setting", "Remotely"], ["semester", "Summer"], ["credit", 4], ["college_id", 12], ["professor_id", 19], ["created_at", "2020-08-14 16:54:16.508849"], ["updated_at", "2020-08-14 16:54:16.508849"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 2753644663], ["student_id", 13], ["course_id", 15], ["created_at", "2020-08-14 16:54:16.515076"], ["updated_at", "2020-08-14 16:54:16.515076"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 1025130531], ["student_id", 16], ["course_id", 18], ["created_at", "2020-08-14 16:54:16.519908"], ["updated_at", "2020-08-14 16:54:16.519908"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 5821696509], ["student_id", 15], ["course_id", 14], ["created_at", "2020-08-14 16:54:16.524639"], ["updated_at", "2020-08-14 16:54:16.524639"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 2775816111], ["student_id", 15], ["course_id", 11], ["created_at", "2020-08-14 16:54:16.529282"], ["updated_at", "2020-08-14 16:54:16.529282"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 2887648642], ["student_id", 14], ["course_id", 12], ["created_at", "2020-08-14 16:54:16.533836"], ["updated_at", "2020-08-14 16:54:16.533836"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 7637654527], ["student_id", 12], ["course_id", 13], ["created_at", "2020-08-14 16:54:16.539009"], ["updated_at", "2020-08-14 16:54:16.539009"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 6980058506], ["student_id", 11], ["course_id", 14], ["created_at", "2020-08-14 16:54:16.543584"], ["updated_at", "2020-08-14 16:54:16.543584"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.3ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 8249397708], ["student_id", 14], ["course_id", 14], ["created_at", "2020-08-14 16:54:16.548604"], ["updated_at", "2020-08-14 16:54:16.548604"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 3095218090], ["student_id", 19], ["course_id", 15], ["created_at", "2020-08-14 16:54:16.553491"], ["updated_at", "2020-08-14 16:54:16.553491"]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRegistration Create (0.2ms)[0m  [1m[32mINSERT INTO "registrations" ("registration_number", "student_id", "course_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["registration_number", 6664717500], ["student_id", 13], ["course_id", 12], ["created_at", "2020-08-14 16:54:16.558315"], ["updated_at", "2020-08-14 16:54:16.558315"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mRegistration Load (0.2ms)[0m  [1m[34mSELECT "registrations".* FROM "registrations" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT ?[0m  [["LIMIT", 11]]
