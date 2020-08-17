@@ -3482,3 +3482,2713 @@ Processing by UniversitiesController#home as HTML
 Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 4894)
 
 
+Started GET "/" for 127.0.0.1 at 2020-08-17 11:29:11 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 203)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 0.0ms | Allocations: 10617)
+
+
+Started GET "/" for 127.0.0.1 at 2020-08-17 11:29:14 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4115)
+
+
+Started GET "/students" for 127.0.0.1 at 2020-08-17 11:29:18 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 7.6ms | Allocations: 5573)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 1.0ms | Allocations: 11978)
+
+
+Started GET "/students/20" for 127.0.0.1 at 2020-08-17 11:29:22 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 20]]
+  ↳ app/views/students/show.html.erb:11
+  Rendered students/show.html.erb within layouts/application (Duration: 17.2ms | Allocations: 9430)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.1ms | ActiveRecord: 1.2ms | Allocations: 14606)
+
+
+Started GET "/" for ::1 at 2020-08-17 11:29:31 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.0ms | Allocations: 4243)
+
+
+Started GET "/students" for 127.0.0.1 at 2020-08-17 11:29:53 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1038)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.1ms | Allocations: 5195)
+
+
+Started GET "/students" for ::1 at 2020-08-17 11:29:57 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1031)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 5318)
+
+
+Started GET "/students/20" for 127.0.0.1 at 2020-08-17 11:30:05 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 20]]
+  ↳ app/views/students/show.html.erb:11
+  Rendered students/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 932)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 5608)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:30:05 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  Rendered students/show.html.erb within layouts/application (Duration: 12.9ms | Allocations: 7131)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 1.0ms | Allocations: 11956)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:30:29 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  Rendered students/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 981)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5653)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 11:30:36 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 5518)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:32:56 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.5ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:13
+  Rendered students/show.html.erb within layouts/application (Duration: 20.3ms | Allocations: 10206)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 1.2ms | Allocations: 15853)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:33:04 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:13
+  Rendered students/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1771)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms | Allocations: 6447)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:33:05 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:13
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1972)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.5ms | Allocations: 7722)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:33:10 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:13
+  Rendered students/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 6444)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:33:44 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms | Allocations: 7563)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:33:49 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1966)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms | Allocations: 7708)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:33:51 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 6445)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:33:53 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1764)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 6582)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:33:55 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1971)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.3ms | Allocations: 7575)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:34:04 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 6584)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:36:25 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1982)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 7718)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:36:28 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  Rendered students/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1773)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 6446)
+
+
+Started GET "/students/11" for ::1 at 2020-08-17 11:37:15 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  Rendered students/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1987)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.4ms | Allocations: 7729)
+
+
+Started GET "/students/11" for 127.0.0.1 at 2020-08-17 11:38:10 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 11]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 11]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 7106)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.7ms | Allocations: 12613)
+
+
+Started GET "/students" for 127.0.0.1 at 2020-08-17 11:38:33 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5470)
+
+
+Started GET "/students/12" for 127.0.0.1 at 2020-08-17 11:38:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 12]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 12]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2722)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 7400)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:38:38 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3490)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms | Allocations: 8164)
+
+
+Started GET "/students" for ::1 at 2020-08-17 11:38:42 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 1023)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 5307)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:38:44 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 4.7ms | Allocations: 3490)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms | Allocations: 8302)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:38:44 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3489)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.4ms | Allocations: 8165)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:39:18 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3724)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 9470)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:39:23 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:10
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:21
+  Rendered students/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3718)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.6ms | Allocations: 9455)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:41:12 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:29
+  Rendered students/show.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3766)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.5ms | Allocations: 9509)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:42:10 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  Rendered students/show.html.erb within layouts/application (Duration: 205.0ms | Allocations: 80811)
+Completed 500 Internal Server Error in 208ms (ActiveRecord: 0.3ms | Allocations: 82635)
+
+
+  
+ActionView::Template::Error (undefined method `Credit' for #<#<Class:0x00007ffc08a421b0>:0x00007ffc08a4b4b8>):
+    15:   <li><%= link_to course.name, course_path(course) %> - Credits: <%= course.credit %> - Professor: <%= link_to course.professor.name, professor_path %> </li>
+    16: 
+    17:   <% total_credit += course.credit%>
+    18:   <div><%= Total Credit Taking: total_credit%></div>
+    19: 
+    20: 
+    21:   <% end %>
+  
+app/views/students/show.html.erb:18
+app/views/students/show.html.erb:14
+Started GET "/students" for ::1 at 2020-08-17 11:42:33 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1197)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6454)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:42:34 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:30
+  Rendered students/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3791)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.4ms | Allocations: 8611)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:42:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:30
+  Rendered students/show.html.erb within layouts/application (Duration: 14.1ms | Allocations: 3496)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 19.2ms | ActiveRecord: 0.6ms | Allocations: 8307)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:42:50 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:30
+  Rendered students/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3779)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 9522)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:42:55 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:14
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:34
+  Rendered students/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3778)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms | Allocations: 9376)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Hollis VanRueden"], ["LIMIT", 11]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."name" = ? LIMIT ?[0m  [["name", "Hollis VonRueden"], ["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."name" = ?[0m  [["name", "Hollis VonRueden"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."name" = ?[0m  [["name", "Hollis VonRueden"]]
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:49:31 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:22
+  Rendered students/show.html.erb within layouts/application (Duration: 63.3ms | Allocations: 26765)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 108ms (Views: 87.6ms | ActiveRecord: 3.1ms | Allocations: 43516)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:49:34 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:22
+  Rendered students/show.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.5ms | Allocations: 8210)
+
+
+Started GET "/students/13" for ::1 at 2020-08-17 11:49:35 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.5ms | Allocations: 9456)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:49:38 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3499)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 8196)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:49:55 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 6.3ms | ActiveRecord: 0.1ms | Allocations: 5534)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:50:00 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 15)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4707)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:50:04 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 15)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4710)
+
+
+Started GET "/professors/13" for ::1 at 2020-08-17 11:52:14 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.1ms | Allocations: 4838)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:52:16 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.1ms | Allocations: 4693)
+
+
+Started GET "/students" for ::1 at 2020-08-17 11:52:56 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1207)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms | Allocations: 5633)
+
+
+Started GET "/professors" for ::1 at 2020-08-17 11:53:00 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1170)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 5585)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 11:53:04 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 4828)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:53:07 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 4822)
+
+
+Started GET "/professors/14" for ::1 at 2020-08-17 11:53:09 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.0ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.1ms | Allocations: 4832)
+
+
+Started GET "/professors/15" for ::1 at 2020-08-17 11:53:11 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 14)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms | Allocations: 4825)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 11:54:45 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.3ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 5156)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.7ms | Allocations: 11640)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 11:54:47 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 7160)
+
+
+Started GET "/colleges" for ::1 at 2020-08-17 11:54:58 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 980)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 5259)
+
+
+Started GET "/colleges/11" for ::1 at 2020-08-17 11:54:59 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5649)
+
+
+Started GET "/professors" for ::1 at 2020-08-17 11:55:19 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms | Allocations: 6010)
+
+
+Started GET "/professors/15" for ::1 at 2020-08-17 11:55:20 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  Rendered professors/show.html.erb within layouts/application (Duration: 7.8ms | Allocations: 3424)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 4645)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1><%= @professor.name %></h1>
+
+<h3> College: <%=  %></h3>
+<ul>
+<% @professor.colleges.each do |college| %>
+  <%= coll
+<% end %>
+</ul>
+<h3> Subject: <%= @professor.subject %></h3>
+
+<h3> Review: <%= @professor.review %></h3> 
+
+<h3> Students: </h3>
+<h3> courses:  </h3>
+
+
+
+):
+1:    <h1><%= @professor.name %></h1>
+2:    
+3:    <h3> College: <%=  %></h3>
+4:    <ul>
+5:    <% @professor.colleges.each do |college| %>
+6:      <%= coll
+7:    <% end %>
+8:    </ul>
+9:    <h3> Subject: <%= @professor.subject %></h3>
+10:    
+11:    <h3> Review: <%= @professor.review %></h3> 
+12:    
+13:    <h3> Students: </h3>
+14:    <h3> courses:  </h3>
+  
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+app/views/professors/show.html.erb:7: syntax error, unexpected '<', expecting ')'
+app/views/professors/show.html.erb:19: syntax error, unexpected end-of-input, expecting end
+Started GET "/professors/15" for ::1 at 2020-08-17 11:55:52 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 15]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2530)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 8234)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:56:00 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 3716)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 9321)
+
+
+Started GET "/students" for 127.0.0.1 at 2020-08-17 11:56:05 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1183)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms | Allocations: 6262)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-08-17 11:56:09 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.1ms | Allocations: 6227)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:56:12 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1224)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.2ms | Allocations: 6822)
+
+
+Started GET "/professors/15" for ::1 at 2020-08-17 11:56:15 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 15]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 6921)
+
+
+Started GET "/professors" for ::1 at 2020-08-17 11:56:19 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms | Allocations: 5574)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:56:21 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1020)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5697)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:56:21 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1019)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 5829)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 11:56:28 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1021)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.2ms | Allocations: 6272)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-08-17 11:56:29 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.1ms | Allocations: 5159)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 11:56:34 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.5ms | Allocations: 8961)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:56:37 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms | Allocations: 6824)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:56:44 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.3ms | Allocations: 6963)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:56:49 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1225)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6961)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:56:57 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1024)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.2ms | Allocations: 5838)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:57:31 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:18
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2264)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.7ms | ActiveRecord: 0.4ms | Allocations: 7864)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:57:36 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:18
+  Rendered professors/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 6634)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 11:58:00 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2231)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 7831)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:58:00 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1958)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.3ms | Allocations: 6777)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-08-17 11:58:02 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1152)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 5440)
+
+
+Started GET "/professors/12" for 127.0.0.1 at 2020-08-17 11:58:03 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1965)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 6641)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 11:58:08 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.4ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1953)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.7ms | Allocations: 6771)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:58:11 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 13]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 13]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms | Allocations: 6542)
+
+
+Started GET "/professors" for ::1 at 2020-08-17 11:58:12 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 998)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 5280)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 11:58:13 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.3ms | Allocations: 6775)
+
+
+Started GET "/professors/12" for 127.0.0.1 at 2020-08-17 11:58:14 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 6642)
+
+
+Started GET "/professors/13" for 127.0.0.1 at 2020-08-17 11:58:16 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 13]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 13]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 6546)
+
+
+Started GET "/professors/15" for 127.0.0.1 at 2020-08-17 11:58:19 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 15]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 15]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6607)
+
+
+Started GET "/professors/17" for 127.0.0.1 at 2020-08-17 11:58:22 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 17]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 17]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1869)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms | Allocations: 6543)
+
+
+Started GET "/professors/18" for 127.0.0.1 at 2020-08-17 11:58:25 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 18], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 18]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 18]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1933)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 6608)
+
+
+Started GET "/professors/12" for 127.0.0.1 at 2020-08-17 11:58:27 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1964)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.3ms | Allocations: 6638)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 11:58:35 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2242)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 7981)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 12:02:02 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:31
+  Rendered professors/show.html.erb within layouts/application (Duration: 14.9ms | Allocations: 3254)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.6ms | Allocations: 9001)
+
+
+Started GET "/professors/12" for 127.0.0.1 at 2020-08-17 12:02:05 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:31
+  Rendered professors/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.3ms | Allocations: 7418)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:02:07 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 182)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5512)
+
+
+Started GET "/courses/14" for ::1 at 2020-08-17 12:02:11 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 4837)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 12:02:27 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:31
+  Rendered professors/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 8800)
+
+
+Started GET "/professors" for 127.0.0.1 at 2020-08-17 12:02:52 -0400
+Processing by ProfessorsController#index as HTML
+  Rendering professors/index.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors"[0m
+  ↳ app/views/professors/index.html.erb:4
+  Rendered professors/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1147)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms | Allocations: 6220)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 12:02:55 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 8017)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:02:57 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.1ms | Allocations: 5843)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:03:01 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 0.2ms | Allocations: 6008)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 12:03:02 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 837)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.2ms | Allocations: 5511)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-08-17 12:03:18 -0400
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:6
+  Rendered courses/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1189)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 5909)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:03:19 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 889)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.3ms | Allocations: 5705)
+
+
+Started GET "/courses/11" for 127.0.0.1 at 2020-08-17 12:03:21 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.1ms | Allocations: 4989)
+
+
+Started GET "/courses/12" for 127.0.0.1 at 2020-08-17 12:03:23 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 4705)
+
+
+Started GET "/courses/13" for 127.0.0.1 at 2020-08-17 12:03:25 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 4703)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:03:27 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4700)
+
+
+Started GET "/courses/17" for 127.0.0.1 at 2020-08-17 12:03:33 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4699)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:04:00 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 5134)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 12:04:02 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 838)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.2ms | Allocations: 5514)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 12:05:39 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 2941)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 8451)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 12:05:52 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 2079)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.3ms | Allocations: 7684)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:05:57 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 2158)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.3ms | Allocations: 7896)
+
+
+Started GET "/colleges/11" for 127.0.0.1 at 2020-08-17 12:05:59 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 11]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1841)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms | Allocations: 6515)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:06:11 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2157)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.3ms | Allocations: 7894)
+
+
+Started GET "/courses/16" for 127.0.0.1 at 2020-08-17 12:06:36 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 5422)
+
+
+Started GET "/professors/14" for ::1 at 2020-08-17 12:06:40 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3027)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 8414)
+
+
+Started GET "/professors/12" for ::1 at 2020-08-17 12:06:43 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 12]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2731)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 7544)
+
+
+Started GET "/courses/17" for 127.0.0.1 at 2020-08-17 12:06:45 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4707)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 12:06:46 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.3ms | Allocations: 7586)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:06:49 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 4837)
+
+
+Started GET "/courses/17" for 127.0.0.1 at 2020-08-17 12:06:51 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4697)
+
+
+Started GET "/professors/16" for 127.0.0.1 at 2020-08-17 12:06:55 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 16], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 16]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 16]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 16]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2686)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 0.4ms | Allocations: 7356)
+
+
+Started GET "/professors/14" for ::1 at 2020-08-17 12:07:07 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 14]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 10.5ms | Allocations: 2703)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.4ms | Allocations: 7516)
+
+
+Started GET "/courses/17" for 127.0.0.1 at 2020-08-17 12:07:08 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 4701)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:07:10 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 5417)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:07:12 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.2ms | Allocations: 6608)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 12:07:15 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 2776)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.5ms | Allocations: 7587)
+
+
+Started GET "/courses/19" for 127.0.0.1 at 2020-08-17 12:07:17 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.1ms | Allocations: 4702)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:07:24 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.1ms | Allocations: 5130)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:07:27 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.2ms | Allocations: 6602)
+
+
+Started GET "/professors/11" for 127.0.0.1 at 2020-08-17 12:08:01 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 7447)
+
+
+Started GET "/professors/11" for ::1 at 2020-08-17 12:08:02 -0400
+Processing by ProfessorsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/professors_controller.rb:8:in `show'
+  Rendering professors/show.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" INNER JOIN "courses" ON "colleges"."id" = "courses"."college_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:5
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:17
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."professor_id" = ?[0m  [["professor_id", 11]]
+  ↳ app/views/professors/show.html.erb:26
+  Rendered professors/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 2770)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.3ms | Allocations: 7585)
+
+
+Started GET "/courses/13" for 127.0.0.1 at 2020-08-17 12:08:14 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.1ms | Allocations: 4695)
+
+
+Started GET "/courses/19" for 127.0.0.1 at 2020-08-17 12:08:22 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.1ms | Allocations: 4699)
+
+
+Started GET "/courses/19" for ::1 at 2020-08-17 12:08:23 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.1ms | Allocations: 21)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 4834)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:08:47 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2162)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.4ms | Allocations: 7906)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:08:56 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2164)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 7904)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:09:17 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 172)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 5558)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:10:00 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.6ms | Allocations: 925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms | Allocations: 6667)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:10:01 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.2ms | Allocations: 5566)
+
+
+Started GET "/courses/19" for 127.0.0.1 at 2020-08-17 12:10:04 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 0.2ms | Allocations: 5432)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:10:06 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 7393)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:10:08 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 6.5ms | ActiveRecord: 0.3ms | Allocations: 5446)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:10:09 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.5ms | Allocations: 6730)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:10:09 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1128)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 0.1ms | Allocations: 5416)
+
+
+Started GET "/courses/19" for ::1 at 2020-08-17 12:10:10 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 7.9ms | ActiveRecord: 0.3ms | Allocations: 5577)
+
+
+Started GET "/colleges/20" for 127.0.0.1 at 2020-08-17 12:10:10 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 20]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 20]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1655)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 6335)
+
+
+Started GET "/courses/14" for ::1 at 2020-08-17 12:10:12 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 754)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms | Allocations: 5567)
+
+
+Started GET "/courses/14" for ::1 at 2020-08-17 12:10:17 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 923)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 6664)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:10:19 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.6ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2160)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 12.4ms | ActiveRecord: 0.8ms | Allocations: 7542)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:10:20 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 5572)
+
+
+Started GET "/colleges/20" for 127.0.0.1 at 2020-08-17 12:10:20 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 20]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 20]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1655)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.5ms | Allocations: 6329)
+
+
+Started GET "/courses/14" for ::1 at 2020-08-17 12:10:23 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 5571)
+
+
+Started GET "/colleges/12" for 127.0.0.1 at 2020-08-17 12:10:23 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 12]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 12]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.3ms | Allocations: 6596)
+
+
+Started GET "/courses/19" for ::1 at 2020-08-17 12:10:25 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 5571)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:10:29 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.4ms | Allocations: 6598)
+
+
+Started GET "/courses/19" for 127.0.0.1 at 2020-08-17 12:10:30 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 756)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.2ms | Allocations: 5436)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:10:43 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 755)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 5565)
+
+
+Started GET "/courses/19" for 127.0.0.1 at 2020-08-17 12:12:51 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Applied Science (Psychology) 396"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1955)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 20.7ms | ActiveRecord: 0.4ms | Allocations: 7562)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:12:54 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 7405)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:12:54 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Communications 495"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms | Allocations: 6522)
+
+
+Started GET "/courses/13" for 127.0.0.1 at 2020-08-17 12:12:55 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Communications 495"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1706)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 6388)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:12:59 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Law 136"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.3ms | Allocations: 6410)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:13:03 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Law 136"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1738)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.3ms | Allocations: 6413)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:13:09 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Communications 495"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1948)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.3ms | Allocations: 7692)
+
+
+Started GET "/courses/14" for 127.0.0.1 at 2020-08-17 12:13:31 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Law 136"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1735)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms | Allocations: 6414)
+
+
+Started GET "/courses" for 127.0.0.1 at 2020-08-17 12:15:09 -0400
+Processing by CoursesController#index as HTML
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:6
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1163)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.1ms | Allocations: 5451)
+
+
+Started GET "/courses/13" for 127.0.0.1 at 2020-08-17 12:15:11 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Communications 495"]]
+  ↳ app/views/courses/show.html.erb:17
+  Rendered courses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1705)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.3ms | Allocations: 6382)
+
+
+Started GET "/colleges/13" for 127.0.0.1 at 2020-08-17 12:15:20 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 2155)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.3ms | Allocations: 7402)
+
+
+Started GET "/colleges/13" for ::1 at 2020-08-17 12:15:41 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 13]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1921)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms | Allocations: 6733)
+
+
+Started GET "/courses/13" for ::1 at 2020-08-17 12:20:52 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.2ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Communications 495"]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1946)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 12.8ms | ActiveRecord: 0.5ms | Allocations: 7687)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:20:57 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1123)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 5844)
+
+
+Started GET "/colleges/14" for 127.0.0.1 at 2020-08-17 12:20:58 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 14]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 14]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1883)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.2ms | Allocations: 6697)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:21:03 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 984)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 5131)
+
+
+Started GET "/university" for 127.0.0.1 at 2020-08-17 12:21:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/university"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2020-08-17 12:21:20 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.0ms | Allocations: 4713)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:21:47 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 983)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.1ms | Allocations: 5131)
+
+
+Started GET "/" for 127.0.0.1 at 2020-08-17 12:22:09 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 4102)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:22:09 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 4244)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2020-08-17 12:24:12 -0400
+Processing by CollegesController#index as HTML
+  Rendering colleges/index.html.erb within layouts/application
+  [1m[36mCollege Load (0.1ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges"[0m
+  ↳ app/views/colleges/index.html.erb:5
+  Rendered colleges/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.1ms | Allocations: 5127)
+
+
+Started GET "/colleges/15" for 127.0.0.1 at 2020-08-17 12:24:16 -0400
+Processing by CollegesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mCollege Load (0.2ms)[0m  [1m[34mSELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/colleges_controller.rb:8:in `show'
+  Rendering colleges/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."college_id" = ?[0m  [["college_id", 15]]
+  ↳ app/views/colleges/show.html.erb:7
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" INNER JOIN "courses" ON "professors"."id" = "courses"."professor_id" WHERE "courses"."college_id" = ?[0m  [["college_id", 15]]
+  ↳ app/views/colleges/show.html.erb:15
+  Rendered colleges/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.4ms | Allocations: 6422)
+
+
+Started GET "/courses/12" for 127.0.0.1 at 2020-08-17 12:24:17 -0400
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:8:in `show'
+  Rendering courses/show.html.erb within layouts/application
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/courses/show.html.erb:8
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "registrations" ON "registrations"."student_id" = "students"."id" INNER JOIN "courses" ON "courses"."id" = "registrations"."course_id" WHERE "courses"."name" = ?[0m  [["name", "Applied Science (Psychology) 377"]]
+  ↳ app/views/courses/show.html.erb:14
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1721)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms | Allocations: 6408)
+
+
+Started GET "/students" for 127.0.0.1 at 2020-08-17 12:24:24 -0400
+Processing by StudentsController#index as HTML
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:6
+  Rendered students/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1192)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 5906)
+
+
+Started GET "/students/13" for 127.0.0.1 at 2020-08-17 12:24:28 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 13]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mCACHE Professor Load (0.0ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 13]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 5.3ms | Allocations: 3713)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.0ms | ActiveRecord: 0.4ms | Allocations: 8526)
+
+
+Started GET "/students/15" for 127.0.0.1 at 2020-08-17 12:24:57 -0400
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/controllers/students_controller.rb:8:in `show'
+  Rendering students/show.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" INNER JOIN "registrations" ON "courses"."id" = "registrations"."course_id" WHERE "registrations"."student_id" = ?[0m  [["student_id", 15]]
+  ↳ app/views/students/show.html.erb:11
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[36mProfessor Load (0.1ms)[0m  [1m[34mSELECT "professors".* FROM "professors" WHERE "professors"."id" = ? LIMIT ?[0m  [["id", 15], ["LIMIT", 1]]
+  ↳ app/views/students/show.html.erb:12
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT SUM("courses"."credit") FROM "courses" INNER JOIN "registrations" ON "registrations"."course_id" = "courses"."id" INNER JOIN "students" ON "students"."id" = "registrations"."student_id" WHERE "students"."id" = ?[0m  [["id", 15]]
+  ↳ app/views/students/show.html.erb:20
+  Rendered students/show.html.erb within layouts/application (Duration: 4.9ms | Allocations: 3545)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms | Allocations: 8217)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:31:28 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 364)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 98ms (Views: 93.4ms | ActiveRecord: 0.0ms | Allocations: 25466)
+
+
+Started GET "/" for 127.0.0.1 at 2020-08-17 12:31:29 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4102)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:32:56 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 21ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 14351)
+
+
+Started GET "/" for 127.0.0.1 at 2020-08-17 12:33:47 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.8ms | ActiveRecord: 0.0ms | Allocations: 13827)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:34:56 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 36ms (Views: 35.4ms | ActiveRecord: 0.0ms | Allocations: 13963)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:35:47 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 5)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 13506)
+
+
+Started GET "/" for ::1 at 2020-08-17 12:35:53 -0400
+Processing by UniversitiesController#home as HTML
+  Rendering universities/home.html.erb within layouts/application
+  Rendered universities/home.html.erb within layouts/application (Duration: 0.0ms | Allocations: 4)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms | Allocations: 4282)
+
+

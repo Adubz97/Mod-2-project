@@ -1,12 +1,29 @@
 <h1><%= @professor.name %></h1>
 
 <h3> College: <%=  %></h3>
+<ul>
+<% @professor.colleges.each do |college| %>
+  <li><%= link_to college.name, college_path(college) %></li>
+<% end %>
+</ul>
 
 <h3> Subject: <%= @professor.subject %></h3>
 
 <h3> Review: <%= @professor.review %></h3> 
 
 <h3> Students: </h3>
-<h3> courses:  </h3>
+
+<ul>
+  <h2><% Student.joins(:courses).where(courses: {professor_id: @professor.id}).each do |student| %></h2>
+    <li><%= "#{student.name}" %></li>
+  <% end%>
+</ul>
 
 
+<h3> Courses:  </h3>
+
+<ul>
+<% @professor.courses.each do |course| %>
+  <li><%= link_to course.name, course_path(course) %></li>
+<% end %>
+</ul>
