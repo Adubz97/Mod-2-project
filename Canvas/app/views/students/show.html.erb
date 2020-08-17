@@ -1,17 +1,20 @@
 <h1><%= @student.name %></h1>
 
 
-<h3> Major:</h3><%= @student.major %>
+<h3> Major: <%= @student.major %> </h3>
 
-<h3> Credits: </h3> 
 
 <h3>Courses:</h3>
 <h4>
 <ul>
+
 <% @student.courses.each do |course| %>
-  <li><%= link_to course.name, course_path(course) %></li>
-  <% end %>
+  <li><%= link_to course.name, course_path(course) %> - Credits: <%= course.credit %> - Professor: <%= link_to course.professor.name, professor_path %> </li>
+<% end %>
+
+
 </ul>
 </h4>
 
-<h3> Professors: </h3>
+
+<h4>Total Credits: <%= Course.joins(:students).where({students: {id: @student.id}}).sum(:credit)%></h4>

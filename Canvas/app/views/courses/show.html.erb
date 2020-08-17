@@ -5,4 +5,13 @@ Description: <%= @course.description %><br>
 Setting: <%= @course.setting %><br>
 Semester: <%= @course.semester %><br>
 Credit: <%= @course.credit %><br>
+Professor: <%= @course.professor.name %>
 </h3>
+
+
+<h2>Registered Students: </h2>
+<ul>
+  <h2><% Student.joins(:courses).where(courses: {name: @course.name}).each do |student| %></h2>
+    <li><%= " #{student.name}" %></li>
+  <% end%>
+</ul>
