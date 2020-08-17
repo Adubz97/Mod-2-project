@@ -34,7 +34,7 @@ end
 10.times do
   Professor.create(name: Faker::Name.name,
                   subject: Faker::Educator.subject,
-                  review: Faker::Hipster.sentence(word_count:6),
+                  review: Faker::Hipster.sentence(word_count:6)
   )
 end
 

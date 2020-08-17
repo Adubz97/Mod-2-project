@@ -1,0 +1,13 @@
+<div class="header">
+    <% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
+
+        <% if p_logged_in? %>
+            Welcome  <%= current_user.username %>
+            <%= link_to "Logout", logout_path, method: :delete %>
+        <% elsif s_logged_in? %>
+            Welcome  <%= current_user.username %>
+            <%= link_to "Logout", logout_path, method: :delete %>
+
+        <% end %>
+    <% end %>
+</div>

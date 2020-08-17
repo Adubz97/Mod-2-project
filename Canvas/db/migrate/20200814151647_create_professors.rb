@@ -4,6 +4,7 @@ class CreateProfessors < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :subject
       t.string :review
+      t.string :username
 
       t.timestamps
     end

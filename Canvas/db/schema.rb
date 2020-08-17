@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_151900) do
     t.string "name"
     t.string "subject"
     t.string "review"
+    t.string "username"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -51,6 +52,7 @@ ActiveRecord::Schema.define(version: 2020_08_14_151900) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.string "major"
+    t.string "username"
     t.integer "student_number"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

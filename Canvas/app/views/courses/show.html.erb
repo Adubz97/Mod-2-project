@@ -9,9 +9,15 @@ Professor: <%= @course.professor.name %>
 </h3>
 
 
+<% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
+
+<% if p_logged_in? %>
 <h2>Registered Students: </h2>
 <ul>
   <h2><% Student.joins(:courses).where(courses: {name: @course.name}).each do |student| %></h2>
     <li><%= " #{student.name}" %></li>
-  <% end%>
+  <% end %>
+
 </ul>
+<% end %>
+<% end %>
