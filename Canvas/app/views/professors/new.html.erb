@@ -1,0 +1,17 @@
+<h1> Create Professor account </h1>
+
+
+
+<%= form_for @professor do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br>
+  <%= f.label :subject %>:
+  <%= f.text_field :subject %><br>
+  <%= f.label :username %>:
+  <%= f.text_field :username %><br>
+  <%= f.label :password %>:
+  <%= f.password_field :password %><br>
+  <%= f.label :password_confirmation %>:
+  <%= f.password_field :password_confirmation %><br>
+  <%= f.submit "create account" %>
+<% end %>

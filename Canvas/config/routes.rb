@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#logout"
 
 
-  resources :students, only: [:index, :show]
-  resources :professors, only: [:index, :show]
+  resources :students, only: [:index, :show, :new, :create]
+  resources :professors, only: [:index, :show, :new, :create]
   resources :colleges, only: [:index, :show]
   resources :courses, only: [:index, :show]
   resources :registrations, only: [:index, :show]
