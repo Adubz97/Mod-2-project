@@ -21,6 +21,14 @@ class ProfessorsController < ApplicationController
     else
       render :new
     end
+
+    def home
+      render(:home)
+    end
+    
+    def mycourses
+      render(:mycourses)
+    end
   end
 
   private

@@ -2,9 +2,11 @@
     <% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
 
         <% if p_logged_in? %>
+            <%= link_to "Home", professor_home_path(@professor) %>
             Welcome  <%= current_user.username %>
             <%= link_to "Logout", logout_path, method: :delete %>
         <% elsif s_logged_in? %>
+        <%= link_to "Home", student_home_path(@student) %>
             Welcome  <%= current_user.username %>
             <%= link_to "Logout", logout_path, method: :delete %>
 

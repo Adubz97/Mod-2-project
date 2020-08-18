@@ -1,6 +1,6 @@
 <h1> Create Professor account </h1>
 
-
+<%= render partial: "shared/error_form", locals: {new_object: @professor} %>
 
 <%= form_for @professor do |f| %>
   <%= f.label :name %>:

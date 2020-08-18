@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     @student = Student.find_by(username: params[:username])
     if @student && @student.authenticate(params[:password])
       session[:student_id] = @student.id
-      redirect_to student_path(@student)
+      redirect_to student_home_path(@student)
     else 
       flash.now[:login_error] = "No account found with those credentials"
       render :login1
@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
     @professor = Professor.find_by(username: params[:username])
     if @professor && @professor.authenticate(params[:password])
       session[:professor_id] = @professor.id
-      redirect_to professor_path(@professor)
+      redirect_to professor_home_path(@professor)
     else 
       flash.now[:login_error] = "No account found with those credentials"
       render :login2

@@ -23,6 +23,14 @@ class StudentsController < ApplicationController
     end
   end
 
+   def home
+      render(:home)
+    end
+    
+    def mycourses
+      render(:mycourses)
+    end
+
   private
   
   def student_params
