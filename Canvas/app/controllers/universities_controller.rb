@@ -4,4 +4,11 @@ class UniversitiesController < ApplicationController
     render(:home)
   end
 
+  def login
+    render(:login)
+  end
+
+  def create
+    render(:create)
+  end
 end

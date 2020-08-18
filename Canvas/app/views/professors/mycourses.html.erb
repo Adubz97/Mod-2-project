@@ -1,0 +1,8 @@
+<h3> Courses:  </h3>
+
+
+<ul>
+<% current_user.courses.each do |course| %>
+  <li><%= link_to course.name, course_path(course) %></li>
+<% end %>
+</ul>

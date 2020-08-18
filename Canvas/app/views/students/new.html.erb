@@ -1,0 +1,17 @@
+<h1> Create Student account </h1>
+
+<%= render partial: "shared/error_form", locals: {new_object: @student} %>
+
+<%= form_for @student do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br>
+  <%= f.label :major %>:
+  <%= f.text_field :major %><br>
+  <%= f.label :username %>:
+  <%= f.text_field :username %><br>
+  <%= f.label :password %>:
+  <%= f.password_field :password %><br>
+  <%= f.label :password_confirmation %>:
+  <%= f.password_field :password_confirmation %><br>
+  <%= f.submit "create account" %>
+<% end %>
