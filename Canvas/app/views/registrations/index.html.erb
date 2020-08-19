@@ -2,7 +2,7 @@
 
 <ul>
 <% current_user.registrations.each do |registration| %>
-  <li><%= link_to registration.id, registration_path(registration) %></li>
+  <li><%= link_to registration.course, registration_path(registration) %></li>
 <% end %>
 </ul>
 

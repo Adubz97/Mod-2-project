@@ -29,7 +29,8 @@ class CoursesController < ApplicationController
   end
   
   def destroy
-    Course.destroy(params[:id])
+    @course = Course.find(params[:id])
+    Course.destroy_course(@course)
     redirect_to professor_mycourses_path(current_user[:id])
   end
   private
