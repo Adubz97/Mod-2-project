@@ -1,0 +1,9 @@
+<h1>Register for a class</h1>
+
+<%= form_for @registration do |f| %>
+<%= f.hidden_field(:student_id, {value: current_user[:id]}) %>
+<%= f.hidden_field(:registration_number, {value: Time.now.to_i}) %>
+<%= f.label(:course) %>
+<%= f.grouped_collection_select(:course_id, College.order(:name), :courses, :name, :id, :name, {prompt: "Select a course"}) %>
+<%= f.submit "Register"%>
+<% end %>

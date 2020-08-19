@@ -5,4 +5,9 @@ has_many :students, through: :registrations
 belongs_to :college
 belongs_to :professor
 
+
+def students
+  
+end
+
 end

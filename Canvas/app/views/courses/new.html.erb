@@ -1,0 +1,19 @@
+
+<h1>Create new course:</h1>
+
+<%= form_for @course do |f| %>
+<%= f.hidden_field(:professor_id, {value: current_user[:id]}) %>
+<%= f.label(:name) %>
+<%= f.text_field(:name) %>
+<%= f.label(:description) %>
+<%= f.text_field(:description) %>
+<%= f.label(:credit)%>
+<%= f.number_field(:credit, min: 1, max: 4) %>
+<%= f.label(:setting) %>
+<%= f.select(:setting, ["On Campus", "Online", "Remotely"], {prompt: "Select Setting"}) %>
+<%= f.label(:semester) %>
+<%= f.select(:semester, ["Spring", "Summer", "Fall", "Winter"], {prompt: "Select Semester"}) %>
+<%= f.label(:college) %>
+<%= f.collection_select(:college_id, College.all, :id, :name, {prompt: "Select College"}) %>
+<%= f.submit "create course" %>
+<% end %>

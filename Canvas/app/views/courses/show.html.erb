@@ -1,5 +1,15 @@
 <h1> <%= @course.name %></h1>
 
+
+<% if p_logged_in? && @course.professor.name == current_user.name %>
+  <%= link_to "Edit course", edit_course_path(@course) %><br>
+  <%= link_to "Delete course", course_path(@course), method: :delete %>
+<% elsif s_logged_in? && @course.student_id == current_user.registration.student_id %>
+  <%= link_to "Drop course", registration_path(@registration), method: :delete %>
+<% end %>
+
+
+
 <h3>
 Description: <%= @course.description %><br>
 Setting: <%= @course.setting %><br>
@@ -7,7 +17,6 @@ Semester: <%= @course.semester %><br>
 Credit: <%= @course.credit %><br>
 Professor: <%= @course.professor.name %>
 </h3>
-
 
 <% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
 

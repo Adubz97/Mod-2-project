@@ -17,7 +17,7 @@ class ProfessorsController < ApplicationController
     if @professor.valid?
       @professor.save
       session[:professor_id] = @professor.id
-      redirect_to professors_path
+      redirect_to professor_home_path(@professor)
     else
       render :new
     end

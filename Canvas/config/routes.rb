@@ -24,8 +24,7 @@ Rails.application.routes.draw do
   resources :students, only: [:index, :show, :new, :create]
   resources :professors, only: [:index, :show, :new, :create]
   resources :colleges, only: [:index, :show]
-  resources :courses, only: [:index, :show]
-  resources :registrations, only: [:index, :show]
+  resources :courses
+  resources :registrations, only: [:index, :show, :new, :create, :destroy]
  
-  
 end
