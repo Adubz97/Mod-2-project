@@ -1,6 +1,11 @@
-<h1>Colleges list:</h1>
+
+<% if p_logged_in? == false && s_logged_in? == false%>
+    <h1 class="header"> A & A University </h1>
+<% end %>
 
 
+ 
+<h2> Colleges: </h2>
 <ul>
 <% @colleges.each do |college| %>
  <li> <%= link_to college.name, college_path(college) %></li>

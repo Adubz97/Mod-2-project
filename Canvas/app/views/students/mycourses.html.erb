@@ -6,3 +6,7 @@
   <li><%= link_to course.name, course_path(course) %></li>
 <% end %>
 </ul>
+
+<%= link_to "Drop a course", registrations_path %>
+
+<h4>Total Credits: <%= Course.joins(:students).where({students: {id: current_user.id}}).sum(:credit)%></h4>

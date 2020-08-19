@@ -1,14 +1,14 @@
+<% if p_logged_in? == false && s_logged_in? == false%>
+    <h1 class="header"> A & A University </h1>
+<% end %>
+
 <h1> <%= @course.name %></h1>
 
 
 <% if p_logged_in? && @course.professor.name == current_user.name %>
   <%= link_to "Edit course", edit_course_path(@course) %><br>
   <%= link_to "Delete course", course_path(@course), method: :delete %>
-<% elsif s_logged_in? && @course.student_id == current_user.registration.student_id %>
-  <%= link_to "Drop course", registration_path(@registration), method: :delete %>
 <% end %>
-
-
 
 <h3>
 Description: <%= @course.description %><br>
@@ -24,7 +24,7 @@ Professor: <%= @course.professor.name %>
 <h2>Registered Students: </h2>
 <ul>
   <h2><% Student.joins(:courses).where(courses: {name: @course.name}).each do |student| %></h2>
-    <li><%= " #{student.name}" %></li>
+    <li><%= link_to "#{student.name}", student_path(student) %></li>
   <% end %>
 
 </ul>

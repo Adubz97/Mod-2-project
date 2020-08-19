@@ -1,3 +1,7 @@
+<% if p_logged_in? == false && s_logged_in? == false%>
+    <h1 class="header"> A & A University </h1>
+<% end %>
+
 <h1><%= @professor.name %></h1>
 
 <h3> College: <%=  %></h3>

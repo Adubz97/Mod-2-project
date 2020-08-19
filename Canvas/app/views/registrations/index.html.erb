@@ -1,2 +1,8 @@
-<h1>Registrations#index</h1>
-<p>Find me in app/views/registrations/index.html.erb</p>
+<h1> Your Registrations: </h1>
+
+<ul>
+<% current_user.registrations.each do |registration| %>
+  <li><%= link_to registration.id, registration_path(registration) %></li>
+<% end %>
+</ul>
+
