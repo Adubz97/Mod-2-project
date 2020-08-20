@@ -15,5 +15,7 @@
 <%= f.select(:semester, ["Spring", "Summer", "Fall", "Winter"], {prompt: "Select Semester"}) %>
 <%= f.label(:college) %>
 <%= f.collection_select(:college_id, College.all, :id, :name, {prompt: "Select College"}) %>
-<%= f.submit "create course" %>
+<%= f.submit "create course", class: "btn  btn-success" %>
 <% end %>
+
+<%= link_to "Back to home page", professor_home_path %>

@@ -7,3 +7,5 @@
 <%= f.grouped_collection_select(:course_id, College.order(:name), :courses, :name, :id, :name, {prompt: "Select a course"}) %>
 <%= f.submit "Register"%>
 <% end %>
+
+<%= link_to "Back to home page", student_home_path %>

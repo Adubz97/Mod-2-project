@@ -4,7 +4,6 @@
 
 <h1> <%= @course.name %></h1>
 
-
 <% if p_logged_in? && @course.professor.name == current_user.name %>
   <%= link_to "Edit course", edit_course_path(@course) %><br>
   <%= link_to "Delete course", course_path(@course), method: :delete %>
@@ -30,3 +29,19 @@ Professor: <%= @course.professor.name %>
 </ul>
 <% end %>
 <% end %>
+
+<% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
+
+  <% if s_logged_in? %>
+        <ul>
+        <% current_user.registrations.find do |registration| %>
+          <% if registration.course.name == @course.name %>
+          <li><%= link_to "Drop this course", registration_path(registration), method: :delete  %></li>
+          <% end %>
+          <% end %>
+          </ul>
+  <% end %>
+
+<% end %>
+
+<%= link_to "Back to college main page", college_path(@course.college.id) %>

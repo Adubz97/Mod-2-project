@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
   get "/", to: "universities#home", as: "home"
+  get "/about", to: "universities#about", as: "about"
   get "/login", to: "universities#login", as: "login"
   get "/create", to: "universities#create", as: "create"
 

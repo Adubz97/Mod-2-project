@@ -7,6 +7,7 @@
 <% end %>
 </ul>
 
-<%= link_to "Drop a course", registrations_path %>
 
 <h4>Total Credits: <%= Course.joins(:students).where({students: {id: current_user.id}}).sum(:credit)%></h4>
+
+<%= link_to "Back to home page", student_home_path %>

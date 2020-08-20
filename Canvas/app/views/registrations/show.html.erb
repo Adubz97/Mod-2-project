@@ -1,2 +1,7 @@
-<h1>Registrations#show</h1>
-<p>Find me in app/views/registrations/show.html.erb</p>
+<h1>Registrations:</h1>
+
+<h1>Registration Number: <%= @registration.registration_number %></h1>
+<h1>Registration Name: <%= @registration.course.name %></h1>
+
+
+<h2><%= link_to "Drop this course", registration_path(@registration), method: :delete %></h2>

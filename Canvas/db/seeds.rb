@@ -15,8 +15,8 @@ Registration.destroy_all
 
 #University 
 
-    University.create(name: "University of Maryland",
-                      address: "1113 Mitchel building, College Park, MD 20742"
+  University.create(name: "A & A University",
+                      address: "4720 Lyndon Street, Upper Darby, PA 19082"
                       )
     
 
