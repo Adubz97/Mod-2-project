@@ -1,11 +1,17 @@
-<h1>Students list:</h1>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light">  Students:  </h1>
+          <hr class="my-4">
 
-
-<h4>
+<h5>
 <ul>
 <% @students.each do |student| %>
   <li><%= link_to student.name, student_path(student) %> -<%= student.major %></li>
 <% end %>
 </ul>
-</h4>
+</h5>
 
+</div>
+      </div>
+    </div>

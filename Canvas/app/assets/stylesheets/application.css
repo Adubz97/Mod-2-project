@@ -26,3 +26,11 @@
 .button {
     color: grey
 }
+
+body {
+  background: url('https://www.umd.edu/sites/umd.edu/files/UMD18_Web_Homepage_Campus-Beauty_Hornbake-Fall-1_4.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}

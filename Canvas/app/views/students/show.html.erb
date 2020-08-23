@@ -1,4 +1,9 @@
-<h1><%= @student.name %></h1>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light"> <%= @student.name %> </h1>
+          <hr class="my-4">
+
 
 
 <h3> Major: <%= @student.major %> </h3>
@@ -18,3 +23,6 @@
 
 
 <h4>Total Credits: <%= Course.joins(:students).where({students: {id: @student.id}}).sum(:credit)%></h4>
+</div>
+      </div>
+    </div>

@@ -25,7 +25,9 @@ Registration.destroy_all
 10.times do
   Student.create(name: Faker::Name.name,
                   major: Faker::Educator.degree,
-                  student_number: Faker::Number.number(digits: 7)
+                  student_number: Faker::Number.number(digits: 7),
+                  username: Faker::Name.name,
+                  password: Faker::Name.name
   )
 end
 
@@ -34,7 +36,9 @@ end
 10.times do
   Professor.create(name: Faker::Name.name,
                   subject: Faker::Educator.subject,
-                  review: Faker::Hipster.sentence(word_count:6)
+                  review: Faker::Hipster.sentence(word_count:6),
+                  username: Faker::Name.name,
+                  password: Faker::Name.name
   )
 end
 

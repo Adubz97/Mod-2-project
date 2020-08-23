@@ -1,16 +1,19 @@
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light"> Colleges: </h1>
+      <table class="table table-hover">
 
-<% if p_logged_in? == false && s_logged_in? == false%>
-    <h1 class="header"> A & A University </h1>
-<% end %>
+    <tbody>
+    <% @colleges.each do |college| %>
+       <tr>
+          <td><%= link_to college.name, college_path(college) %></td>
+       </tr>
+    <% end %>
+    </tbody>
+  </table>
+      <div style="height: 100px"></div>
+    </div>
+  </div>
+</div>
 
-
- 
-<h2> Colleges: </h2>
-<ul>
-<% @colleges.each do |college| %>
- <li> <%= link_to college.name, college_path(college) %></li>
-
-<% end %>
-</ul>
-
-<%= link_to "Back to home page", home_path %>

@@ -1,5 +1,8 @@
-<h3> Courses:  </h3>
-
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light"> Courses: </h1>
+          <hr class="my-4">
 
 <ul>
 <% current_user.courses.each do |course| %>
@@ -7,5 +10,6 @@
 <% end %>
 </ul>
 
-
-<%= link_to "Back to home page", professor_home_path %>
+</div>
+      </div>
+    </div>

@@ -1,15 +1,65 @@
 <div class="header">
     <% unless params[:controller] == "sessions" &&  params[:action] == "login" %>
 
-        <% if p_logged_in? %>
-            <%= link_to "Home", professor_home_path(@professor) %>
+        <% if p_logged_in? || s_logged_in? %>
             Welcome  <%= current_user.username %>
-            <%= link_to "Logout", logout_path, method: :delete %>
-        <% elsif s_logged_in? %>
-        <%= link_to "Home", student_home_path(@student) %>
-            Welcome  <%= current_user.username %>
-            <%= link_to "Logout", logout_path, method: :delete %>
-
         <% end %>
+        
     <% end %>
 </div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<% if p_logged_in? == false && s_logged_in? == false%>
+  <a class="navbar-brand" <%= link_to "A & A University", home_path %></a>
+<% elsif p_logged_in? %>
+  <a class="navbar-brand" <%= link_to "A & A University", professor_home_path(@professor) %></a>
+<% elsif s_logged_in? %>
+<a class="navbar-brand" <%= link_to "A & A University", student_home_path(@student) %></a>
+<% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" <%= link_to "Colleges", colleges_path %><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" <%= link_to "Professors", professors_path %><span class="sr-only">(current)</span></a>
+      </li>
+      <% if p_logged_in? == false && s_logged_in? == false%>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Login
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" <%= link_to "Student", login_student_path %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" <%= link_to "Professor", login_professor_path %></a>
+        </div>
+      </li>
+      <li class="nav-item active dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Sign up
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" <%= link_to "Student", new_student_path %></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" <%= link_to "Professor", new_professor_path%></a>
+        </div>
+      </li>
+      <% end %>
+       <li class="nav-item active">
+        <a class="nav-link" <%= link_to "About", about_path %><span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"></a>
+      </li>
+    </ul>
+    <% if p_logged_in? || s_logged_in?%>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><%= link_to "Logout", logout_path, method: :delete %></button>
+      <% end %>
+    </form>
+  </div>
+</nav>

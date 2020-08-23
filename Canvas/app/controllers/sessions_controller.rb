@@ -1,10 +1,12 @@
 class SessionsController < ApplicationController
 
   def login_student
+    @student_form_token = form_authenticity_token
     render(:login1)
   end
 
   def login_professor
+    @professor_form_token = form_authenticity_token
     render(:login2)
   end
 

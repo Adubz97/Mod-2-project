@@ -1,6 +1,8 @@
-<% if p_logged_in? == false && s_logged_in? == false%>
-<h1 class="header"> <%= link_to "Sign up", create_path %> A & A University <%= link_to "Login", login_path %></h1> 
-<% end %>
-<h3> <%= @university.address %> </h3>
 
-<%= link_to "Back to home page", home_path %>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light"> Address: <%= @university.address %>  </h1>
+    </div>
+  </div>
+</div>

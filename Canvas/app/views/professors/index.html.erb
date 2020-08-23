@@ -1,7 +1,14 @@
-<h1> Professors list: </h1>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light">  Professors:  </h1>
+          <hr class="my-4">
 
 <ul>
   <% @professors.each do |professor| %>
     <li><%= link_to professor.name, professor_path(professor.id) %></li>
   <% end%>
 </ul>
+</div>
+      </div>
+    </div>

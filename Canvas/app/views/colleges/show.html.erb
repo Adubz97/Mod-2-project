@@ -1,10 +1,10 @@
-<% if p_logged_in? == false && s_logged_in? == false%>
-    <h1 class="header"> A & A University </h1>
-<% end %>
+<div class="container">
+  <div class="card border-0 shadow my-5">
+    <div class="card-body p-4">
+      <h1 class="font-weight-light"> <%= @college.name %> </h1>
+          <hr class="my-4">
 
-<h1> <%= @college.name %> </h1><br>
 
-<b>College rating: <%= @college.rating %> </b>
 
 
 <h3>Courses:</h3>
@@ -13,7 +13,7 @@
 <% end %>
 </ul>
 
-
+<hr class="my-4">
 <h3> Professors: </h3>
 <ul>
 <% @college.professors.each do |professor| %>
@@ -22,4 +22,6 @@
 </ul>
 
 
-<%= link_to "Back to colleges page", colleges_path %>
+</div>
+      </div>
+    </div>
