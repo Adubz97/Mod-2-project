@@ -23,7 +23,7 @@ An app that allows students to search schools, courses at their university and r
   - run "rails s"
   - open "localhost:3000" on your browser.
   
-## Demo
+## Canvas - Demo
 [![Canvas Demo Video](https://img.youtube.com/vi/qPON_JUpzGQ/0.jpg)](https://youtu.be/qPON_JUpzGQ)
 
 ## Authors
