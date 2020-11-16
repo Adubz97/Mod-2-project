@@ -2,6 +2,9 @@
 # Canvas
 An app that allows students to search schools, courses at their university and register for them, also allows professors to check the classes they are offering for a specific semester and view a list of students that signed up for their classes.
 
+## Canvas - Demo
+[![Canvas Demo Video](https://img.youtube.com/vi/qPON_JUpzGQ/0.jpg)](https://youtu.be/qPON_JUpzGQ)
+
  ## Available features:
  
   - Core Functionalities:
@@ -23,9 +26,6 @@ An app that allows students to search schools, courses at their university and r
   - run "rails s"
   - open "localhost:3000" on your browser.
   
-## Canvas - Demo
-[![Canvas Demo Video](https://img.youtube.com/vi/qPON_JUpzGQ/0.jpg)](https://youtu.be/qPON_JUpzGQ)
-
 ## Authors
 - Abdullah Albasha (https://github.com/Adubz97)
 
