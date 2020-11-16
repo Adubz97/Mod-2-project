@@ -26,7 +26,7 @@ An app that allows students to search schools, courses at their university and r
   - run "rails s"
   - open "localhost:3000" on your browser.
   
-## Authors
+## 👤 Authors
 - Abdullah Albasha (https://github.com/Adubz97)
 
 - Andrew Park (https://github.com/acparkgh)
@@ -34,5 +34,5 @@ An app that allows students to search schools, courses at their university and r
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/Adubz97/Mod-2-project/issues. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-## License 
+## 📝 License 
 The code is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
